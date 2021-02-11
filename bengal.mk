@@ -682,6 +682,9 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelephonyResCommon
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 # Phantom process monitoring
 PRODUCT_VENDOR_PROPERTIES += \
     sys.fflag.override.settings_enable_monitor_phantom_procs=false
