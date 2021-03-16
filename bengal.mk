@@ -442,7 +442,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # DPM
-PRODUCT_SYSTEM_PROPERTIES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.dpm.feature=11
 
 PRODUCT_VENDOR_PROPERTIES += \
