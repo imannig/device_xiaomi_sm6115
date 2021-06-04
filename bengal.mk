@@ -443,7 +443,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # DPM
 PRODUCT_SYSTEM_PROPERTIES += \
-    persist.dpm.feature=1
+    persist.dpm.feature=11
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.dpmhalservice.enable=1
