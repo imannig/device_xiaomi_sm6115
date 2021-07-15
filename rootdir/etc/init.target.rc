@@ -306,6 +306,10 @@ on boot
     # Touchpanel
     chown system system /sys/touchpanel/double_tap
 
+    # GPU boost
+    chown system system /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+
 service adsprpcd /vendor/bin/adsprpcd
    class main
    user media
