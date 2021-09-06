@@ -447,6 +447,12 @@ on boot
     # Touchpanel
     chown system system /sys/touchpanel/double_tap
 
+service adsprpcd /vendor/bin/adsprpcd
+   class main
+   user media
+   group media
+   disabled
+
 service dcvs-sh /vendor/bin/init.qti.dcvs.sh
     class late_start
     user root
