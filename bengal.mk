@@ -381,6 +381,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.1.vendor
 
 PRODUCT_SYSTEM_PROPERTIES += \
+    debug.hwui.skia_atrace_enabled=false \
     dev.pm.dyn_samplingrate=1
 
 PRODUCT_VENDOR_PROPERTIES += \
