@@ -583,6 +583,11 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libavservices_minijail_vendor
 
+PRODUCT_PACKAGES += \
+    libcodec2_vndk.vendor \
+    android.hardware.media.c2@1.0.vendor \
+    libcodec2_hidl@1.0.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
