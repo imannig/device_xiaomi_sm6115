@@ -458,10 +458,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
 
-# FRP
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # Fingerprint
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.fp.sideCap=true
