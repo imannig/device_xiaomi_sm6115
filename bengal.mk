@@ -373,7 +373,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.1.vendor
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    debug.sf.auto_latch_unsignaled=true \
     dev.pm.dyn_samplingrate=1
 
 PRODUCT_VENDOR_PROPERTIES += \
