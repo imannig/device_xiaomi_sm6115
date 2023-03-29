@@ -174,6 +174,18 @@ vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
+# Bluetooth (LDAC) - from alioth-user-12-SKQ1.211006.001-V13.0.6.0.SKHMIXM-release-keys
+system_ext/lib/libldacBT_abr.so|0fa74e2d405b5b98034214cb12a516a9269b5522
+system_ext/lib/libldacBT_enc.so|5f22c53411f50ff8fe75ab9010393f7d2ad68471
+system_ext/lib64/libldacBT_abr.so|2f0607e051f8901e47e1b212390246968f9ae0cb
+system_ext/lib64/libldacBT_enc.so|fb6f1f186d93ff5646da115c45a228d27f667156
+
+# Bluetooth (LHDC) - from alioth-user-12-SKQ1.211006.001-V13.0.6.0.SKHMIXM-release-keys
+system_ext/lib/liblhdc.so|a836c0d681224ae6ea6bb0b6e070657fb4bb8cf6
+system_ext/lib/liblhdcBT_enc.so|cbb1d707bd1296feb1406e1abcb192730717046d
+system_ext/lib64/liblhdc.so|6764a919021489515f05f335ef8bb49d130efba1
+system_ext/lib64/liblhdcBT_enc.so|7698891b7d0f09247f7a1b2255fb4905364a6538
+
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.bengal.so
 
