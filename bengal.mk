@@ -322,8 +322,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.soc.manufacturer=QTI \
-    ro.soc.model=SM6115
+    ro.soc.manufacturer=QTI
 
 # CNE
 PRODUCT_SYSTEM_PROPERTIES += \
