@@ -401,6 +401,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.0.vendor \
     vendor.qti.hardware.display.mapperextensions@1.1.vendor
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    dev.pm.dyn_samplingrate=1
+
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.sensortype=2 \
     ro.vendor.display.svi=1 \
@@ -521,6 +524,20 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
+# HWUI
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.hwui.texture_cache_size=72 \
+    ro.hwui.layer_cache_size=48 \
+    ro.hwui.r_buffer_cache_size=8 \
+    ro.hwui.path_cache_size=32 \
+    ro.hwui.gradient_cache_size=1 \
+    ro.hwui.drop_shadow_cache_size=6 \
+    ro.hwui.texture_cache_flushrate=0.4 \
+    ro.hwui.text_small_cache_width=1024 \
+    ro.hwui.text_small_cache_height=1024 \
+    ro.hwui.text_large_cache_width=2048 \
+    ro.hwui.text_large_cache_height=1024
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -620,7 +637,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.ccodec=1 \
     debug.stagefright.omx_default_rank=0 \
-    vendor.mm.enable.qcom_parser=16777215
+    vendor.mm.enable.qcom_parser=63963135
 
 # Net
 PRODUCT_PACKAGES += \
@@ -749,6 +766,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# QCA1530 detection
+PRODUCT_SYSTEM_PROPERTIES += \
+    sys.qca1530=detect
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
@@ -794,14 +815,18 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SYSTEM_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
+    persist.data.netmgrd.qos.enable=true \
     persist.vendor.data.mode=concurrent \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.report_codec=1 \
     ril.subscription.types=NV,RUIM \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
-    ro.telephony.default_network=33,33 \
+    ro.telephony.default_network=22,20 \
     ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    config.disable_rtt=true
 
 PRODUCT_VENDOR_PROPERTIES += \
     keyguard.no_require_sim=true \
