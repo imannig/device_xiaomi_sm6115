@@ -452,6 +452,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
 
+# Elixir
+PRODUCT_PRODUCT_PROPERTIES += \
+    org.elixir.device=Poco M3 & Redmi 9T
+
 # Fingerprint
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.fp.sideCap=true
