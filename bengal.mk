@@ -460,6 +460,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# Elixir
+PRODUCT_PRODUCT_PROPERTIES += \
+    org.elixir.device=Poco M3 & Redmi 9T
+
 # Fingerprint
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.fp.sideCap=true
