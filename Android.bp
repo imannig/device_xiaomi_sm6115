@@ -1,5 +1,5 @@
 soong_namespace {
     imports: [
-        "vendor/hardware/xiaomi",
+        "hardware/xiaomi",
     ],
 }

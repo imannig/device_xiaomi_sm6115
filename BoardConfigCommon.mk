@@ -43,7 +43,6 @@ TARGET_BOOTLOADER_BOARD_NAME := bengal
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE := true
 TARGET_USES_COLOR_METADATA := true
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_USES_DRM_PP := true
@@ -69,6 +68,10 @@ TARGET_HALS_PATH ?= hardware/qcom-caf/$(OVERRIDE_QCOM_HARDWARE_VARIANT)
 # HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+
+# Init
+TARGET_INIT_VENDOR_LIB ?= //$(COMMON_PATH):init_xiaomi_bengal
+TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_bengal
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8
@@ -134,9 +137,6 @@ TARGET_BOARD_PLATFORM := bengal
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
-
-# Properties
-TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom

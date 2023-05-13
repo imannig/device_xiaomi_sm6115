@@ -19,31 +19,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Platform
-PRODUCT_USES_QCOM_HARDWARE := true
-PRODUCT_BOARD_PLATFORM := bengal
-OVERRIDE_QCOM_HARDWARE_VARIANT := bengal
-TARGET_HALS_PATH ?= hardware/qcom-caf/$(OVERRIDE_QCOM_HARDWARE_VARIANT)
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    vendor/hardware/xiaomi
-
-# Bootanimation
-scr_resolution := 1080
-
-# Disable Quick Tap
-DISABLE_COLUMBUS := true
-
-# Enable blurs
-#TARGET_USES_BLUR := true
-
-# Enable gameservice
-ENABLE_GAMETOOLS := true
-
-# Google Pixel Launcher
-INCLUDE_PIXEL_LAUNCHER := true
+    hardware/xiaomi
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -350,8 +329,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=8
 
 # Display
-$(call inherit-product-if-exists, vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk)
-
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
